@@ -24,13 +24,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwJ-vv-agR">
-                                            <rect key="frame" x="16" y="39" width="53" height="27"/>
+                                            <rect key="frame" x="16" y="39" width="163" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7W-3H-uk4">
-                                            <rect key="frame" x="322" y="30" width="76" height="39"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7W-3H-uk4">
+                                            <rect key="frame" x="235" y="30" width="163" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                             <color key="textColor" white="0.33582589289999998" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -47,9 +47,11 @@
                                         <constraint firstItem="mNZ-FJ-Se4" firstAttribute="centerX" secondItem="RtP-kE-GHR" secondAttribute="centerX" id="7sx-zl-tix"/>
                                         <constraint firstItem="F7W-3H-uk4" firstAttribute="top" secondItem="RtP-kE-GHR" secondAttribute="top" constant="30" id="8WG-bY-hZd"/>
                                         <constraint firstItem="mNZ-FJ-Se4" firstAttribute="centerY" secondItem="RtP-kE-GHR" secondAttribute="centerY" id="8fM-e0-kAf"/>
+                                        <constraint firstItem="F7W-3H-uk4" firstAttribute="leading" secondItem="mNZ-FJ-Se4" secondAttribute="trailing" constant="8" id="GZH-ix-ky1"/>
                                         <constraint firstItem="OwJ-vv-agR" firstAttribute="leading" secondItem="RtP-kE-GHR" secondAttribute="leading" constant="16" id="Sze-GX-Oqg"/>
                                         <constraint firstAttribute="trailing" secondItem="F7W-3H-uk4" secondAttribute="trailing" constant="16" id="fGn-hP-6lZ"/>
                                         <constraint firstItem="OwJ-vv-agR" firstAttribute="top" secondItem="RtP-kE-GHR" secondAttribute="top" constant="39" id="jc8-8p-Wuw"/>
+                                        <constraint firstItem="mNZ-FJ-Se4" firstAttribute="leading" secondItem="OwJ-vv-agR" secondAttribute="trailing" constant="8" id="qJF-N1-kme"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
