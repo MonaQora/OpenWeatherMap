@@ -6,6 +6,7 @@ target 'OpenWeatherMap' do
   use_frameworks!
 
   # Pods for OpenWeatherMap
+  pod 'SDWebImage', '~> 5.0'
   pod 'ReachabilitySwift' , '~> 5.0.0'
 
   target 'OpenWeatherMapTests' do
