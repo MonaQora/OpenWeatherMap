@@ -78,11 +78,7 @@ class WeatherListTableViewController: UITableViewController {
     }
     
     func loadingIndicatorStartAnimating() {
-        if #available(iOS 13.0, *) {
-            loadingIndicator = UIActivityIndicatorView(style: .large)
-        } else {
-            // Fallback on earlier versions
-        }
+        loadingIndicator = UIActivityIndicatorView(style: .gray)
         loadingIndicator.center = CGPoint(x: self.view.frame.width / 2, y: self.tableView.contentOffset.y + self.view.frame.height / 2)
         self.view.addSubview(loadingIndicator)
         DispatchQueue.main.async {
