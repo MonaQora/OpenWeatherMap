@@ -10,7 +10,6 @@
 		390AE3CBC40E0A74A84634F0 /* Pods_OpenWeatherMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D856D87890E6E58F8F39B3C8 /* Pods_OpenWeatherMap.framework */; };
 		4834E2FE23B657FB005E9443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E2FD23B657FB005E9443 /* AppDelegate.swift */; };
 		4834E30023B657FB005E9443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E2FF23B657FB005E9443 /* SceneDelegate.swift */; };
-		4834E30223B657FB005E9443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E30123B657FB005E9443 /* ViewController.swift */; };
 		4834E30523B657FB005E9443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4834E30323B657FB005E9443 /* Main.storyboard */; };
 		4834E30723B657FC005E9443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4834E30623B657FC005E9443 /* Assets.xcassets */; };
 		4834E30A23B657FC005E9443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4834E30823B657FC005E9443 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,10 @@
 		4834E34F23B67A5C005E9443 /* OWMLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E34E23B67A5C005E9443 /* OWMLocalStore.swift */; };
 		4834E35223B67A7F005E9443 /* OWMForecastListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E35023B67A7F005E9443 /* OWMForecastListServiceTests.swift */; };
 		4834E35323B67A7F005E9443 /* OWMLocalStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E35123B67A7F005E9443 /* OWMLocalStoreTests.swift */; };
+		4834E36223BAA8A8005E9443 /* OWMWeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */; };
+		4834E36423BAA8CC005E9443 /* DynamicDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E36323BAA8CC005E9443 /* DynamicDataSource.swift */; };
+		4834E36623BAA8F7005E9443 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E36523BAA8F7005E9443 /* DynamicValue.swift */; };
+		4834E36823BAAA39005E9443 /* OWMWeatherListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E36723BAAA39005E9443 /* OWMWeatherListViewModelTests.swift */; };
 		6F4D987A2E3450F75CCD7F85 /* Pods_OpenWeatherMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F910A3195469CE18345334B /* Pods_OpenWeatherMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,6 @@
 		4834E2FA23B657FB005E9443 /* OpenWeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4834E2FD23B657FB005E9443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4834E2FF23B657FB005E9443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4834E30123B657FB005E9443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4834E30423B657FB005E9443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4834E30623B657FC005E9443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4834E30923B657FC005E9443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		4834E34E23B67A5C005E9443 /* OWMLocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWMLocalStore.swift; sourceTree = "<group>"; };
 		4834E35023B67A7F005E9443 /* OWMForecastListServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWMForecastListServiceTests.swift; sourceTree = "<group>"; };
 		4834E35123B67A7F005E9443 /* OWMLocalStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWMLocalStoreTests.swift; sourceTree = "<group>"; };
+		4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherListViewModel.swift; sourceTree = "<group>"; };
+		4834E36323BAA8CC005E9443 /* DynamicDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDataSource.swift; sourceTree = "<group>"; };
+		4834E36523BAA8F7005E9443 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		4834E36723BAAA39005E9443 /* OWMWeatherListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherListViewModelTests.swift; sourceTree = "<group>"; };
 		4DFFE86C4ACA0DDF94CEF48E /* Pods-OpenWeatherMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMap/Pods-OpenWeatherMap.release.xcconfig"; sourceTree = "<group>"; };
 		649CD9F3B846E4904DE83C59 /* Pods-OpenWeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F910A3195469CE18345334B /* Pods_OpenWeatherMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,12 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				4834E34023B678F8005E9443 /* Helper */,
+				4834E35D23BAA796005E9443 /* Views */,
+				4834E36023BAA867005E9443 /* ViewModels */,
+				4834E34B23B67A41005E9443 /* Models */,
 				4834E34523B67955005E9443 /* LocalStore */,
 				4834E34823B67A0D005E9443 /* Services */,
-				4834E34B23B67A41005E9443 /* Models */,
 				4834E2FD23B657FB005E9443 /* AppDelegate.swift */,
 				4834E2FF23B657FB005E9443 /* SceneDelegate.swift */,
-				4834E30123B657FB005E9443 /* ViewController.swift */,
 				4834E30323B657FB005E9443 /* Main.storyboard */,
 				4834E30623B657FC005E9443 /* Assets.xcassets */,
 				4834E30823B657FC005E9443 /* LaunchScreen.storyboard */,
@@ -125,6 +132,7 @@
 			children = (
 				4834E35023B67A7F005E9443 /* OWMForecastListServiceTests.swift */,
 				4834E35123B67A7F005E9443 /* OWMLocalStoreTests.swift */,
+				4834E36723BAAA39005E9443 /* OWMWeatherListViewModelTests.swift */,
 				4834E31623B657FC005E9443 /* Info.plist */,
 			);
 			path = OpenWeatherMapTests;
@@ -135,6 +143,8 @@
 			children = (
 				4834E34123B678F8005E9443 /* OWMServiceResonse.swift */,
 				4834E34223B678F8005E9443 /* OWMServerClient.swift */,
+				4834E36323BAA8CC005E9443 /* DynamicDataSource.swift */,
+				4834E36523BAA8F7005E9443 /* DynamicValue.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -162,6 +172,21 @@
 				4834E34C23B67A41005E9443 /* OWPWeatherListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4834E35D23BAA796005E9443 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4834E36023BAA867005E9443 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		88464282B344DE28A88E0893 /* Frameworks */ = {
@@ -358,9 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4834E34A23B67A0D005E9443 /* OWMForecastListService.swift in Sources */,
-				4834E30223B657FB005E9443 /* ViewController.swift in Sources */,
+				4834E36623BAA8F7005E9443 /* DynamicValue.swift in Sources */,
 				4834E34423B678F8005E9443 /* OWMServerClient.swift in Sources */,
+				4834E36223BAA8A8005E9443 /* OWMWeatherListViewModel.swift in Sources */,
 				4834E34323B678F8005E9443 /* OWMServiceResonse.swift in Sources */,
+				4834E36423BAA8CC005E9443 /* DynamicDataSource.swift in Sources */,
 				4834E34723B6798C005E9443 /* OWMConstants.swift in Sources */,
 				4834E2FE23B657FB005E9443 /* AppDelegate.swift in Sources */,
 				4834E34F23B67A5C005E9443 /* OWMLocalStore.swift in Sources */,
@@ -373,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4834E36823BAAA39005E9443 /* OWMWeatherListViewModelTests.swift in Sources */,
 				4834E35223B67A7F005E9443 /* OWMForecastListServiceTests.swift in Sources */,
 				4834E35323B67A7F005E9443 /* OWMLocalStoreTests.swift in Sources */,
 			);
