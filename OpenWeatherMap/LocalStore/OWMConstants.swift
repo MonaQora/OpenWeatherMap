@@ -35,3 +35,16 @@ struct OWMConstant {
     static let parisCityName = "paris"
     static let numDays16 = 16
 }
+
+struct OWMNavigationTitle {
+    static let forecastListControllerTitle = "Paris Forecast"
+}
+
+struct OWMError {
+    static let errorTitle = "An error occured"
+    static let colseButtonTitle = "Close"
+}
+
+struct OWMCustomCells {
+    static let weatherListCellID = "WeatherCell"
+}
