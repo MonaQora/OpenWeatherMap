@@ -34,6 +34,11 @@ struct OWMConstant {
 
     static let parisCityName = "paris"
     static let numDays16 = 16
+    
+    static let kHot = "Hot"
+    static let kCold = "Cold"
+    static let kMinHot = 25.0
+    static let kMinCold = 10.0
 }
 
 struct OWMNavigationTitle {

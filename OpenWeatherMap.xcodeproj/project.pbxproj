@@ -30,6 +30,8 @@
 		4834E37023BAAD1A005E9443 /* OWMWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E36F23BAAD1A005E9443 /* OWMWeatherTableViewCell.swift */; };
 		4834E37323BAAF81005E9443 /* Double+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E37223BAAF81005E9443 /* Double+Extentions.swift */; };
 		4834E37523BAB479005E9443 /* OWMWeatherListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E37423BAB479005E9443 /* OWMWeatherListTableViewDataSourceTests.swift */; };
+		4834E37923BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E37823BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift */; };
+		4834E37D23BAC8F6005E9443 /* OWMWeatherDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E37C23BAC8F6005E9443 /* OWMWeatherDetailsViewModelTests.swift */; };
 		6F4D987A2E3450F75CCD7F85 /* Pods_OpenWeatherMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F910A3195469CE18345334B /* Pods_OpenWeatherMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		4834E36F23BAAD1A005E9443 /* OWMWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		4834E37223BAAF81005E9443 /* Double+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extentions.swift"; sourceTree = "<group>"; };
 		4834E37423BAB479005E9443 /* OWMWeatherListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		4834E37823BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherDetailsViewModel.swift; sourceTree = "<group>"; };
+		4834E37C23BAC8F6005E9443 /* OWMWeatherDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMWeatherDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		4DFFE86C4ACA0DDF94CEF48E /* Pods-OpenWeatherMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMap/Pods-OpenWeatherMap.release.xcconfig"; sourceTree = "<group>"; };
 		649CD9F3B846E4904DE83C59 /* Pods-OpenWeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F910A3195469CE18345334B /* Pods_OpenWeatherMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +129,7 @@
 				4834E35D23BAA796005E9443 /* Views */,
 				4834E36023BAA867005E9443 /* ViewModels */,
 				4834E34B23B67A41005E9443 /* Models */,
-				4834E36B23BAAC61005E9443 /* TableDataSource */,
+				4834E36B23BAAC61005E9443 /* TableViewDataSource */,
 				4834E36E23BAACCD005E9443 /* CustomCells */,
 				4834E37123BAAF5D005E9443 /* Extenstions */,
 				4834E34523B67955005E9443 /* LocalStore */,
@@ -147,6 +151,7 @@
 				4834E35123B67A7F005E9443 /* OWMLocalStoreTests.swift */,
 				4834E36723BAAA39005E9443 /* OWMWeatherListViewModelTests.swift */,
 				4834E37423BAB479005E9443 /* OWMWeatherListTableViewDataSourceTests.swift */,
+				4834E37C23BAC8F6005E9443 /* OWMWeatherDetailsViewModelTests.swift */,
 				4834E31623B657FC005E9443 /* Info.plist */,
 			);
 			path = OpenWeatherMapTests;
@@ -200,16 +205,17 @@
 			isa = PBXGroup;
 			children = (
 				4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */,
+				4834E37823BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		4834E36B23BAAC61005E9443 /* TableDataSource */ = {
+		4834E36B23BAAC61005E9443 /* TableViewDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				4834E36C23BAACA2005E9443 /* OWMWeatherListTableViewDataSource.swift */,
 			);
-			path = TableDataSource;
+			path = TableViewDataSource;
 			sourceTree = "<group>";
 		};
 		4834E36E23BAACCD005E9443 /* CustomCells */ = {
@@ -423,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4834E37923BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift in Sources */,
 				4834E34A23B67A0D005E9443 /* OWMForecastListService.swift in Sources */,
 				4834E36623BAA8F7005E9443 /* DynamicValue.swift in Sources */,
 				4834E37023BAAD1A005E9443 /* OWMWeatherTableViewCell.swift in Sources */,
@@ -446,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4834E36823BAAA39005E9443 /* OWMWeatherListViewModelTests.swift in Sources */,
+				4834E37D23BAC8F6005E9443 /* OWMWeatherDetailsViewModelTests.swift in Sources */,
 				4834E35223B67A7F005E9443 /* OWMForecastListServiceTests.swift in Sources */,
 				4834E35323B67A7F005E9443 /* OWMLocalStoreTests.swift in Sources */,
 				4834E37523BAB479005E9443 /* OWMWeatherListTableViewDataSourceTests.swift in Sources */,
