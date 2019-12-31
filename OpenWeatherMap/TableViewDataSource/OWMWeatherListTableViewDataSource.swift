@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherListTableViewDataSource : DataSource<ForecastDetailsModel>, UITableViewDataSource {
 
+    let cellIdentfier = OWMCustomCells.weatherListCellID
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.value.count
     }
@@ -19,8 +21,8 @@ class WeatherListTableViewDataSource : DataSource<ForecastDetailsModel>, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: OWMCustomCells.weatherListCellID, for: indexPath) as? WeatherTableViewCell else {
-            fatalError("\(OWMCustomCells.weatherListCellID) not found")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentfier, for: indexPath) as? WeatherTableViewCell else {
+            fatalError("\(cellIdentfier) not found")
         }
         
         cell.weatherDetails = self.data.value[indexPath.row]
