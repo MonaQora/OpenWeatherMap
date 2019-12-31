@@ -17,7 +17,7 @@ class OWMForecastListServiceTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        service = PFForescastListWebService()
+        service = ForescastListWebService()
     }
     
     override func tearDown() {
