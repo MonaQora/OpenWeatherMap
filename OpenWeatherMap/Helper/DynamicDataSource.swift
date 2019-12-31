@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DynamicDataSource<T> : NSObject {
-    var data: DynamicValue<[T]> = DynamicValue([])
+class DataSource<T> : NSObject {
+    var data: Value<[T]> = Value([])
 }
 

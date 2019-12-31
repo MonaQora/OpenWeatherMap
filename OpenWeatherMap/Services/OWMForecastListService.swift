@@ -12,7 +12,7 @@ protocol ForescastListWebServiceProtocol : class {
     func loadForecastList (cityName: String, days: Int, localStoreKey: String?, completion: @escaping ([ForecastDetailsModel]?, ErrorResponse?) -> ())
 }
 
-class PFForescastListWebService: ForescastListWebServiceProtocol {
+class ForescastListWebService: ForescastListWebServiceProtocol {
 
     func loadForecastList (cityName: String, days: Int, localStoreKey: String?, completion: @escaping ([ForecastDetailsModel]?, ErrorResponse?) -> ()) {
     

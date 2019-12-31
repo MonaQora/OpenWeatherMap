@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DynamicValue<Model> {
+class Value<Model> {
     
     typealias CompletionHandler = ((Model) -> Void)
     

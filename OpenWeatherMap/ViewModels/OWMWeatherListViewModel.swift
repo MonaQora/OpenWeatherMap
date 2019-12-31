@@ -11,12 +11,12 @@ import Foundation
 class WeatherListViewModel {
     
     var onErrorHandling : ((ErrorResponse?) -> Void)?
-    var dataSource : DynamicDataSource<ForecastDetailsModel>?
+    var dataSource : DataSource<ForecastDetailsModel>?
     var service: ForescastListWebServiceProtocol?
 
-    init(dataSource : DynamicDataSource<ForecastDetailsModel>?) {
+    init(dataSource : DataSource<ForecastDetailsModel>?) {
         self.dataSource = dataSource
-        self.service = PFForescastListWebService()
+        self.service = ForescastListWebService()
     }
     
     func loadParis16DaysForecast()  {

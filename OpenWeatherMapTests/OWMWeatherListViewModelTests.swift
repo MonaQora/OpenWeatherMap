@@ -12,13 +12,13 @@ import XCTest
 class OWMWeatherListViewModelTests: XCTestCase {
     
     var viewModel : WeatherListViewModel!
-    private var dataSource : DynamicDataSource<ForecastDetailsModel>! //mackup datasource
+    private var dataSource : DataSource<ForecastDetailsModel>! //mackup datasource
     private var service: MockDataService! //mockup service
     private let timeOut = 5.0
     
     override func setUp() {
         super.setUp()
-        self.dataSource = DynamicDataSource<ForecastDetailsModel>()
+        self.dataSource = DataSource<ForecastDetailsModel>()
         self.service = MockDataService()
         self.viewModel = WeatherListViewModel.init(dataSource: dataSource)
         self.viewModel.service = service
