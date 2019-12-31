@@ -53,3 +53,7 @@ struct OWMError {
 struct OWMCustomCells {
     static let weatherListCellID = "WeatherCell"
 }
+
+struct OWMIdentfier {
+    static let forecastListController = "WeatherDetailsView"
+}

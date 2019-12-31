@@ -101,4 +101,8 @@ extension WeatherListTableViewController {
         return 100
     }
 
-}
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let deatilsVC = storyboard!.instantiateViewController(withIdentifier: OWMIdentfier.forecastListController) as! WeatherDetailsViewController
+        deatilsVC.weatherDetailsViewModel = WeatherDetailsViewModel.init(weatherDetails: dataSource.data.value[indexPath.row])
+        self.navigationController?.pushViewController(deatilsVC, animated: true)
+    }}
