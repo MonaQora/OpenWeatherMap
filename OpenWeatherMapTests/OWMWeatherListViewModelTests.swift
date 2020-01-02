@@ -13,14 +13,16 @@ class OWMWeatherListViewModelTests: XCTestCase {
     
     var viewModel : WeatherListViewModel!
     private var dataSource : DataSource<ForecastDetailsModel>! //mackup datasource
+    private var errorResponse : Value<ErrorResponse>! //mackup datasource
     private var service: MockDataService! //mockup service
     private let timeOut = 5.0
     
     override func setUp() {
         super.setUp()
         self.dataSource = DataSource<ForecastDetailsModel>()
+        self.errorResponse = Value(.none)
         self.service = MockDataService()
-        self.viewModel = WeatherListViewModel.init(dataSource: dataSource)
+        self.viewModel = WeatherListViewModel.init(dataSource: dataSource, errorResponse: errorResponse)
         self.viewModel.service = service
     }
     
@@ -33,8 +35,9 @@ class OWMWeatherListViewModelTests: XCTestCase {
     
     func testNilService() {
         let expectation = XCTestExpectation(description: "Missing service")
+        
         viewModel.service = nil
-        viewModel.onErrorHandling = { error in
+        errorResponse.addObserver(self) {_ in
             expectation.fulfill()
         }
         viewModel.loadParis16DaysForecast()
@@ -44,8 +47,9 @@ class OWMWeatherListViewModelTests: XCTestCase {
     
     func testLoadForecastListFailed () {
         let expectation = XCTestExpectation(description: "Failed load list")
+        
         service.forecastList = nil
-        viewModel.onErrorHandling = { error in
+        errorResponse.addObserver(self) {_ in
             expectation.fulfill()
         }
         viewModel.loadParis16DaysForecast()

@@ -11,7 +11,7 @@ import XCTest
 
 class OWMForecastListServiceTests: XCTestCase {
     
-    private let timeOut = 30.0
+    private let timeOut = 35.0
 
     private var service: ForescastListWebServiceProtocol?
     

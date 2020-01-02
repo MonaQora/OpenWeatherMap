@@ -14,6 +14,7 @@ enum Response<T, E: Error> {
 }
 
 enum ErrorResponse: Error {
+    case none
     case network(string: String)
     case custom(string: String)
     case native(string: String)
