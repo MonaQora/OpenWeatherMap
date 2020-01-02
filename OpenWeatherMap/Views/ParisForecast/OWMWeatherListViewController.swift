@@ -15,6 +15,7 @@ class WeatherListTableViewController: UITableViewController {
     private var errorResponse: Value<ErrorResponse>?
 
     lazy var weatherListViewModel : WeatherListViewModel = {
+        errorResponse = Value(.none)
         let viewModel = WeatherListViewModel(dataSource: dataSource, errorResponse: errorResponse)
         return viewModel
     }()
@@ -52,7 +53,6 @@ class WeatherListTableViewController: UITableViewController {
     }
     
     func setupErrorHandling() {
-        errorResponse = Value(.none)
         errorResponse?.addAndNotify(observer: self) {[weak self] error in
             let message: String
             switch error {

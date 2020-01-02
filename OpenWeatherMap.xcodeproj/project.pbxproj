@@ -115,13 +115,62 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		4833CE6B23BE12BA00AD9F9F /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				4834E34223B678F8005E9443 /* OWMServerClient.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		4833CE6C23BE12D100AD9F9F /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4834E34123B678F8005E9443 /* OWMServiceResonse.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		4833CE6D23BE133000AD9F9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4834E36323BAA8CC005E9443 /* DynamicDataSource.swift */,
+				4833CE6E23BE13CD00AD9F9F /* ParisForecast */,
+				4833CE6F23BE13F500AD9F9F /* WeatherDetails */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4833CE6E23BE13CD00AD9F9F /* ParisForecast */ = {
+			isa = PBXGroup;
+			children = (
+				4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */,
+				4834E36C23BAACA2005E9443 /* OWMWeatherListTableViewDataSource.swift */,
+			);
+			path = ParisForecast;
+			sourceTree = "<group>";
+		};
+		4833CE6F23BE13F500AD9F9F /* WeatherDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4834E37823BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift */,
+			);
+			path = WeatherDetails;
+			sourceTree = "<group>";
+		};
+		4833CE7023BE14E200AD9F9F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4834E30323B657FB005E9443 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		4834696523BD8A92002A26C9 /* ParisForecast */ = {
 			isa = PBXGroup;
 			children = (
 				4834E36923BAAC30005E9443 /* OWMWeatherListViewController.swift */,
 				4834E36F23BAAD1A005E9443 /* OWMWeatherTableViewCell.swift */,
-				4834E36C23BAACA2005E9443 /* OWMWeatherListTableViewDataSource.swift */,
-				4834E36123BAA8A8005E9443 /* OWMWeatherListViewModel.swift */,
 			);
 			path = ParisForecast;
 			sourceTree = "<group>";
@@ -130,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				483653CF23BB6FBE00007AC5 /* OWMWeatherDetailsViewController.swift */,
-				4834E37823BABEFB005E9443 /* OWMWeatherDetailsViewModel.swift */,
 			);
 			path = WeatherDetails;
 			sourceTree = "<group>";
@@ -160,12 +208,12 @@
 			children = (
 				4833CE6923BE0B3000AD9F9F /* AppDelegate */,
 				4834E34023B678F8005E9443 /* Helper */,
-				4834E35D23BAA796005E9443 /* UI */,
+				4834E35D23BAA796005E9443 /* Views */,
+				4833CE6D23BE133000AD9F9F /* ViewModel */,
 				4834E34B23B67A41005E9443 /* Models */,
-				4834E37123BAAF5D005E9443 /* Extenstions */,
 				4834E34523B67955005E9443 /* LocalStore */,
 				4834E34823B67A0D005E9443 /* Services */,
-				4834E30323B657FB005E9443 /* Main.storyboard */,
+				4833CE7023BE14E200AD9F9F /* Storyboards */,
 				4834E30623B657FC005E9443 /* Assets.xcassets */,
 				4834E30823B657FC005E9443 /* LaunchScreen.storyboard */,
 				4834E30B23B657FC005E9443 /* Info.plist */,
@@ -189,10 +237,7 @@
 		4834E34023B678F8005E9443 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4834E34123B678F8005E9443 /* OWMServiceResonse.swift */,
-				4834E34223B678F8005E9443 /* OWMServerClient.swift */,
-				4834E36323BAA8CC005E9443 /* DynamicDataSource.swift */,
-				4834E36523BAA8F7005E9443 /* DynamicValue.swift */,
+				4834E37123BAAF5D005E9443 /* Extenstions */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -209,6 +254,8 @@
 		4834E34823B67A0D005E9443 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4833CE6B23BE12BA00AD9F9F /* Parser */,
+				4833CE6C23BE12D100AD9F9F /* Results */,
 				4834E34923B67A0D005E9443 /* OWMForecastListService.swift */,
 			);
 			path = Services;
@@ -217,19 +264,20 @@
 		4834E34B23B67A41005E9443 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4834E36523BAA8F7005E9443 /* DynamicValue.swift */,
 				4834E34C23B67A41005E9443 /* OWMWeatherListModel.swift */,
 				483653DF23BD564C00007AC5 /* OWMWeatherDetailsUIModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4834E35D23BAA796005E9443 /* UI */ = {
+		4834E35D23BAA796005E9443 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4834696523BD8A92002A26C9 /* ParisForecast */,
 				4834696623BD8ABB002A26C9 /* WeatherDetails */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4834E37123BAAF5D005E9443 /* Extenstions */ = {
