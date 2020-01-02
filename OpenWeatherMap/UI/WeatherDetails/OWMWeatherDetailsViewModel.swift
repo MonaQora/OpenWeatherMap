@@ -12,7 +12,6 @@ class WeatherDetailsViewModel {
     
     private var weatherDetails: ForecastDetailsModel!
     private var weatherUIDetails: Value<WeatherDetailsUIModel>?
-
     
     init(weatherDetails: ForecastDetailsModel, weatherUIDetails: Value<WeatherDetailsUIModel>) {
         self.weatherDetails = weatherDetails

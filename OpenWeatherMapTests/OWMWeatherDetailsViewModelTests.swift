@@ -35,7 +35,6 @@ class OWMWeatherDetailsViewModelTests: XCTestCase {
         sTemp = nil
         fModel = nil
         fWeather = nil
-        weatherDetailstVM = nil
     }
 
     func testColdWeather() {
