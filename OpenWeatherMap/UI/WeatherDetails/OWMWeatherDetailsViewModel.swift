@@ -10,69 +10,92 @@ import Foundation
 
 class WeatherDetailsViewModel {
     
-    var weatherDetails: ForecastDetailsModel!
+    private var weatherDetails: ForecastDetailsModel!
+    private var weatherUIDetails: Value<WeatherDetailsUIModel>?
+
     
-    init(weatherDetails: ForecastDetailsModel) {
+    init(weatherDetails: ForecastDetailsModel, weatherUIDetails: Value<WeatherDetailsUIModel>) {
         self.weatherDetails = weatherDetails
+        self.weatherUIDetails = weatherUIDetails
+        setUIModelData()
+    }
+
+    func setUIModelData() {
+        
         if weatherDetails.Weather.count >= 1 {
             let weather = weatherDetails.Weather[0]
             weatherIconURL = "\(OWMURL.kWeatherIconURL)\(weather.icon).png"
             self.weatherTitleText = "\(weather.title):"
             self.weatherDescriptionText = weather.description
         }
+        
+        let weatherUIDetailsModel = WeatherDetailsUIModel()
+        weatherUIDetailsModel.weatherIcon = self.weatherIconURL
+        weatherUIDetailsModel.weatherTitle = self.weatherTitleText
+        weatherUIDetailsModel.weatherDescription = self.weatherDescriptionText
+        weatherUIDetailsModel.date = self.dateText
+        weatherUIDetailsModel.maxTemp = self.maxTempText
+        weatherUIDetailsModel.minTemp = self.minTempText
+        weatherUIDetailsModel.eveningTemp = self.eveningTempText
+        weatherUIDetailsModel.nightTemp = self.nightTempText
+        weatherUIDetailsModel.weather = self.weatherText
+        weatherUIDetailsModel.dayTemp = self.dayTempText
+        weatherUIDetailsModel.morningTemp = self.morningTempText
+        
+        weatherUIDetails?.value = weatherUIDetailsModel
     }
     
-    var dateText: String {
+    private var dateText: String {
         get {
             return weatherDetails.date.getDateStringFromUTC
         }
     }
     
-    var dayTempText: String {
+    private var dayTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureDay.formatAsDegree
         }
     }
     
-    var maxTempText: String {
+    private var maxTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureMax.formatAsDegree
         }
     }
     
-    var minTempText: String {
+    private var minTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureMin.formatAsDegree
         }
     }
     
-    var morningTempText: String {
+    private var morningTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureMorning.formatAsDegree
         }
     }
     
-    var eveningTempText: String {
+    private var eveningTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureEvening.formatAsDegree
         }
     }
     
-    var nightTempText: String {
+    private var nightTempText: String {
         get {
             return weatherDetails.forecastTemperature.temperatureNight.formatAsDegree
         }
     }
     
-    var weatherText: String {
+    private var weatherText: String {
         get {
             return weatherDescription(temp: weatherDetails.forecastTemperature.temperatureDay)
         }
     }
     
-    var weatherIconURL:String = ""
-    var weatherTitleText:String = ""
-    var weatherDescriptionText:String = ""
+    private var weatherIconURL:String = ""
+    private var weatherTitleText:String = ""
+    private var weatherDescriptionText:String = ""
     
     //To be easly parse any temp maybe added later to baseViewModel to be used at any place
     func weatherDescription(temp: Double) -> String {

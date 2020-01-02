@@ -17,6 +17,8 @@ class OWMWeatherDetailsViewModelTests: XCTestCase {
     private var fModel: ForecastDetailsModel!
     private var sTemp: TemperatureModel!
 
+    var weatherUIDetails = Value(WeatherDetailsUIModel())
+
     override func setUp() {
         fTemp = TemperatureModel(temperatureDay: 13.13, temperatureMorning: 13.13, temperatureEvening: 12.39, temperatureNight: 13.83, temperatureMin: 12.37, temperatureMax: 13.83)
         sTemp = TemperatureModel(temperatureDay: 26.0, temperatureMorning: 22.0, temperatureEvening: 22.0, temperatureNight: 20.0, temperatureMin: 20.0, temperatureMax: 26.0)
@@ -24,7 +26,7 @@ class OWMWeatherDetailsViewModelTests: XCTestCase {
         fWeather = [WeatherModel(title: "Rain", description: "light rain", icon: "10d")]
         fModel = ForecastDetailsModel(forecastTemperature: fTemp, date: 1578308400, sunrise: 1578296601, sunset: 1578326914, Weather: fWeather)
         
-        self.weatherDetailstVM = WeatherDetailsViewModel(weatherDetails: fModel)
+        weatherDetailstVM = WeatherDetailsViewModel(weatherDetails: fModel, weatherUIDetails: weatherUIDetails)
     }
     
     override func tearDown() {
@@ -33,29 +35,36 @@ class OWMWeatherDetailsViewModelTests: XCTestCase {
         sTemp = nil
         fModel = nil
         fWeather = nil
+        weatherDetailstVM = nil
     }
-    
+
     func testColdWeather() {
-        XCTAssertEqual(self.weatherDetailstVM.weatherDescription(temp: fTemp.temperatureDay), OWMConstant.kCold)
+        XCTAssertEqual(weatherDetailstVM.weatherDescription(temp: fTemp.temperatureDay), OWMConstant.kCold)
     }
 
     func testHotWeather() {
-        XCTAssertEqual(self.weatherDetailstVM.weatherDescription(temp: sTemp.temperatureDay), OWMConstant.kHot)
+        XCTAssertEqual(weatherDetailstVM.weatherDescription(temp: sTemp.temperatureDay), OWMConstant.kHot)
     }
 
     func testViewModelReturnsDataSucessfully() {
-        XCTAssertEqual(weatherDetailstVM.dateText, "Jan 6, 2020" )
-        XCTAssertEqual(weatherDetailstVM.dayTempText, "13°" )
-        XCTAssertEqual(weatherDetailstVM.maxTempText, "14°" )
-        XCTAssertEqual(weatherDetailstVM.minTempText, "12°")
-        XCTAssertEqual(weatherDetailstVM.morningTempText, "13°")
-        XCTAssertEqual(weatherDetailstVM.eveningTempText, "12°")
-        XCTAssertEqual(weatherDetailstVM.nightTempText, "14°")
-        XCTAssertEqual(weatherDetailstVM.weatherText, "Cold")
-        XCTAssertEqual(weatherDetailstVM.weatherIconURL, "https://openweathermap.org/img/w/10d.png")
-        XCTAssertEqual(weatherDetailstVM.weatherTitleText, "Rain:")
-        XCTAssertEqual(weatherDetailstVM.weatherDescriptionText, "light rain")
-
+        
+        let expectation = XCTestExpectation(description: "Successfully Set UI Model")
+        weatherDetailstVM.setUIModelData()
+        weatherUIDetails.addAndNotify(observer: self) {weatherDetails in
+            expectation.fulfill()
+            XCTAssertEqual(weatherDetails.date, "Jan 6, 2020" )
+            XCTAssertEqual(weatherDetails.dayTemp, "13°" )
+            XCTAssertEqual(weatherDetails.maxTemp, "14°" )
+            XCTAssertEqual(weatherDetails.minTemp, "12°")
+            XCTAssertEqual(weatherDetails.morningTemp, "13°")
+            XCTAssertEqual(weatherDetails.eveningTemp, "12°")
+            XCTAssertEqual(weatherDetails.nightTemp, "14°")
+            XCTAssertEqual(weatherDetails.weather, "Cold")
+            XCTAssertEqual(weatherDetails.weatherIcon, "https://openweathermap.org/img/w/10d.png")
+            XCTAssertEqual(weatherDetails.weatherTitle, "Rain:")
+            XCTAssertEqual(weatherDetails.weatherDescription, "light rain")
+        }
+        wait(for: [expectation], timeout: 30.0)
     }
 }
 
