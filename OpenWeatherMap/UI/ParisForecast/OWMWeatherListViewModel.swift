@@ -11,10 +11,9 @@ import Foundation
 class WeatherListViewModel {
     
     var dataSource : DataSource<ForecastDetailsModel>?
+    var errorResponse: Value<ErrorResponse>?
     var service: ForescastListWebServiceProtocol?
 
-    var errorResponse: Value<ErrorResponse>?
-    
     init(dataSource : DataSource<ForecastDetailsModel>?, errorResponse: Value<ErrorResponse>?) {
         self.dataSource = dataSource
         self.errorResponse = errorResponse

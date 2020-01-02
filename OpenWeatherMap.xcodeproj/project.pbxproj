@@ -106,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4833CE6923BE0B3000AD9F9F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4834E2FD23B657FB005E9443 /* AppDelegate.swift */,
+				4834E2FF23B657FB005E9443 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		4834696523BD8A92002A26C9 /* ParisForecast */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,14 +158,13 @@
 		4834E2FC23B657FB005E9443 /* OpenWeatherMap */ = {
 			isa = PBXGroup;
 			children = (
+				4833CE6923BE0B3000AD9F9F /* AppDelegate */,
 				4834E34023B678F8005E9443 /* Helper */,
 				4834E35D23BAA796005E9443 /* UI */,
 				4834E34B23B67A41005E9443 /* Models */,
 				4834E37123BAAF5D005E9443 /* Extenstions */,
 				4834E34523B67955005E9443 /* LocalStore */,
 				4834E34823B67A0D005E9443 /* Services */,
-				4834E2FD23B657FB005E9443 /* AppDelegate.swift */,
-				4834E2FF23B657FB005E9443 /* SceneDelegate.swift */,
 				4834E30323B657FB005E9443 /* Main.storyboard */,
 				4834E30623B657FC005E9443 /* Assets.xcassets */,
 				4834E30823B657FC005E9443 /* LaunchScreen.storyboard */,
@@ -209,8 +217,8 @@
 		4834E34B23B67A41005E9443 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				483653DF23BD564C00007AC5 /* OWMWeatherDetailsUIModel.swift */,
 				4834E34C23B67A41005E9443 /* OWMWeatherListModel.swift */,
+				483653DF23BD564C00007AC5 /* OWMWeatherDetailsUIModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
